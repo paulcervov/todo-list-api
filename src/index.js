@@ -8,16 +8,19 @@ const updateItem = require('./routes/updateItem');
 const deleteItem = require('./routes/deleteItem');
 
 app.use(express.json());
-app.use(express.static(__dirname + '/static'));
 
 app.get('/', getItems);
 app.post('/', addItem);
 app.put('/:id', updateItem);
 app.delete('/:id', deleteItem);
 
+const port = 8080;
+const host = '0.0.0.0';
+
 db.init()
     .then(() => {
-        app.listen(3000, () => console.log('Listening on port 3000'));
+        app.listen(port, host);
+        console.log(`Running on http://${host}:${port}`);
     })
     .catch(err => {
         console.error(err);
