@@ -1,7 +1,7 @@
 FROM node:12-alpine
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 RUN npm ci --production
-COPY . .
+COPY src /app/src
 EXPOSE 80
 CMD ["node", "src/index.js"]
