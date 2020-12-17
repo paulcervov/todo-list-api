@@ -1,9 +1,5 @@
 /node_modules
 npm-debug.log*
-
-*.sqlite
-*.sqlite-journal
-
 .DS_Store
 .env
 /.idea

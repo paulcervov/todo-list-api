@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
-const location = process.env.SQLITE_DB_LOCATION || './database.sqlite';
+const location = process.env.SQLITE_DB_LOCATION || './database/sqlite/database.sqlite';
 
 let db, dbAll, dbRun;
 
