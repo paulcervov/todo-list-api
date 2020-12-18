@@ -1,7 +1,10 @@
-# Todo List API
+# Todo List Api
 
-Backend part of simple todo list app.\
-Inspired [Docker Getting Started Tutorial](https://github.com/docker/getting-started).
+🐬 Backend part of simple todo list app.
+
+Inspired by [Docker Getting Started Tutorial](https://github.com/docker/getting-started).
+
+⚛️ Frontend part is in a separate [repository](https://github.com/paulcervov/todo-list-app).
 
 ## Available Scripts
 
