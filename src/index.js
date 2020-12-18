@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors')
 const app = express();
 const db = require('./persistence');
 
@@ -9,6 +10,7 @@ const updateItem = require('./routes/updateItem');
 const deleteItem = require('./routes/deleteItem');
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', getItems);
 app.post('/', addItem);
