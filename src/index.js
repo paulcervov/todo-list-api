@@ -1,4 +1,4 @@
-require('dotenv').config();
+const {host = 'localhost', port = 4000} = require('minimist')(process.argv.slice(2));
 const express = require('express');
 const cors = require('cors')
 const app = express();
@@ -16,9 +16,6 @@ app.get('/', getItems);
 app.post('/', addItem);
 app.put('/:id', updateItem);
 app.delete('/:id', deleteItem);
-
-const port = 4000;
-const host = process.env.HOST || '0.0.0.0';
 
 db.init()
     .then(() => {
