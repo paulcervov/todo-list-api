@@ -12,7 +12,7 @@ This project is part of the [Todo List](https://github.com/paulcervov/todo-list)
 
 4. `npm run start`
 
-### Setup and run in production (with Docker)
+### Setup and run with Docker
 
 1. `git clone https://github.com/paulcervov/todo-list-api.git && cd todo-list-api`
 
@@ -28,7 +28,8 @@ This project is part of the [Todo List](https://github.com/paulcervov/todo-list)
     -v "$(pwd)/package.json:/app/package.json" \
     -v "$(pwd)/package-lock.json:/app/package-lock.json" \
     --env-file $(pwd)/.env \
-    node:12-alpine sh -c "npm ci --production && node src/index.js"
+    node:12-alpine sh -c "npm ci --production && \
+        node src/index.js"
     ```
 5. `docker logs -f todo-list-api`
 
