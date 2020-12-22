@@ -29,7 +29,7 @@ This project is part of the [Todo List](https://github.com/paulcervov/todo-list)
     -v "$(pwd)/package-lock.json:/app/package-lock.json" \
     --env-file $(pwd)/.env \
     node:12-alpine sh -c "npm ci --production && \
-        node src/index.js"
+        node src/index.js --host=0.0.0.0"
     ```
 5. `docker logs -f todo-list-api`
 
