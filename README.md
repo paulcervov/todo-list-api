@@ -12,7 +12,7 @@ This project is part of the [Todo List](https://github.com/paulcervov/todo-list)
 
 4. `npm run start`
 
-### Setup and run with Docker
+## Setup and run with Docker
 
 1. `git clone https://github.com/paulcervov/todo-list-api.git && cd todo-list-api`
 
