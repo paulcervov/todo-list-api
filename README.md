@@ -33,5 +33,8 @@ This project is part of the [Todo List](https://github.com/paulcervov/todo-list)
     ```
 5. `docker logs -f todo-list-api`
 
-See all [base commands](https://docs.docker.com/engine/reference/commandline/docker/).
+Wait for the container to be loaded.
 
+To stop container enter `docker stop todo-list-api`.
+
+See all [base commands](https://docs.docker.com/engine/reference/commandline/docker/).
