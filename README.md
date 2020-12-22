@@ -1,27 +1,36 @@
 # Todo List Api
 
-🐬 Backend part of simple todo list app.
+This project is part of the [Todo List](https://github.com/paulcervov/todo-list) project.
 
-Inspired by [Docker Getting Started Tutorial](https://github.com/docker/getting-started).
+## Setup and run local
 
-⚛️ Frontend part is in a separate [repository](https://github.com/paulcervov/todo-list-app).
+1. `git clone https://github.com/paulcervov/todo-list-api.git && cd todo-list-api`
 
-## Available Scripts
+2. `cp .env.example .env`
 
-In the project directory, you can run:
+3. fill `.env` file
 
-### `npm start`
+4. `npm run start`
 
-Runs the app in the development mode (with automatically restarting and SQLite database).
+### Setup and run in production (with Docker)
 
-### `docker-compose up -d`
+1. `git clone https://github.com/paulcervov/todo-list-api.git && cd todo-list-api`
 
-Runs the app in the production mode (with *clean* installation and MySQL database).
+2. `cp .env.example .env`
 
-### `docker-compose logs -f`
+3. fill `.env` file
 
-Viewing app logs.
+4. ```
+    docker run \
+    --name todo-list-api --rm \
+    -dp 4000:4000 -w /app \
+    -v "$(pwd)/src:/app/src" \
+    -v "$(pwd)/package.json:/app/package.json" \
+    -v "$(pwd)/package-lock.json:/app/package-lock.json" \
+    --env-file $(pwd)/.env \
+    node:12-alpine sh -c "npm ci --production && node src/index.js"
+    ```
+5. `docker logs -f todo-list-api`
 
-### `docker-compose down`
+See all [base commands](https://docs.docker.com/engine/reference/commandline/docker/).
 
-Stops the app.
