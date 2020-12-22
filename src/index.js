@@ -17,7 +17,7 @@ app.post('/', addItem);
 app.put('/:id', updateItem);
 app.delete('/:id', deleteItem);
 
-const port = process.env.PORT || 80;
+const port = 4000;
 const host = process.env.HOST || '0.0.0.0';
 
 db.init()
